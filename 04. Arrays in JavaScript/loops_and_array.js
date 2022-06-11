@@ -18,3 +18,14 @@ const aList = [ 'Lawrence', 'Svekis', true, 35, null, undefined, [ 'one', 'two' 
 // • Assign MIDDLE to the third index value.
 // • Add LAST to the last position in the array.
 // • Output it to the console. (POST YOUR ANSWER TO THE GOOGLE CLASSROOM)
+
+// Solution
+// Manipulating an array
+
+// theList.pop();
+// theList.shift();
+// theList.unshift("FIRST");
+// theList[3] = "hello World";
+// theList[2] = "MIDDLE";
+// theList.push("LAST");
+// console.log(theList);
