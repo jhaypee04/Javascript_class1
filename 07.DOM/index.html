@@ -10,14 +10,136 @@
     <h1>DOM - Document Object Model</h1>
     <div id='element'></div>
 
-    <div id="when"></div>
+    <!-- <div id="when"></div>
     <h1 class="h1Element"></h1>
     <h2 class="h1Element"></h2>
     <h3 class="h1Element"></h3>
 
     <h1 class='h1'>Targetting your account</h1>
     <h1 class='h1'>Different content</h1>
-    <h1 class='h1'>Ego</h1>
+    <h1 class='h1'>Ego</h1> -->
+
+    <h2>Element Click Handler</h2>
+    <div id="one" onclick ="alert('Ouch! Stop !')">Don't click here, The first one!</div>
+
+    <script>
+        function stop() {
+            alert('Ouch! Stop Pressing me Please');
+        }
+    </script>
+    <div id="one" onclick="stop()">Actually click here!</div>
+
+
+    <script>
+        function toggleDisplay(){
+            let p = document.getElementById('magic');
+            if(p.style.display === "none") {
+                p.style.display = "block";
+            } else {
+                p.style.display = "none";
+            }
+        }
+    </script>
+    <p id ='magic' >I might disappear and appear</p>
+    <button onclick="toggleDisplay()">Magic</button>
+
+    <script>
+        function rainbowify(){
+            let divs = document.getElementsByTagName("div");
+            for(let i = 0; i < divs.length; i++) {
+                divs[i].style.backgroundColor = divs[i].id;
+                console.log(divs[i].id);
+            }
+        }
+    </script>
+
+    <style>
+        div{
+            height: 30px;
+            width: 30px;
+            background-color: white;
+        }
+    </style>
+
+    <div id="red"></div>
+    <div id="orange"></div>
+    <div id="yellow"></div>
+    <div id="green"></div>
+    <div id="blue"></div>
+    <div id="indigo"></div>
+    <div id="violet"></div>
+    <button onclick="rainbowify()">Make me a rainbow</button>
+
+    <!-- Adding classes to an element -->
+    <script>
+        function disappear(){
+            document.getElementById('shape').classList.add('hide');
+        }
+    </script>
+    <style>
+        .hide{
+            display:none;
+        }
+        .square{
+            height: 100px;
+            width: 100px;
+            background-color: yellow;
+        }
+        .square.blue{
+            background-color: blue;
+        }
+    </style>
+    <div id="shape" class="square blue"></div>
+    <button onclick="disappear()">Disappear</button>
+<script>
+        function changeVisibility() {
+            document.getElementById('shape').classList.toggle('blue');
+        }
+    </script>
+    <!-- Removing Classes from elements -->
+    <script>
+        function change(){
+            document.getElementById('shape').classList.remove('blue');
+        }
+    </script>
+<button onclick="change()" >Change!</button>
+
+<!-- Toggling Classes -->
+<script>
+    function changeVisibility() {
+        document.getElementById('shape').classList.toggle('blue');
+    }
+</script>
+
+<button onclick="changeVisibility()">Toggler</button>
+
+<!-- Manipulating Attributes -->
+<script>
+    function changeAttr() {
+        let el = document.getElementById('shape2');
+        el.setAttribute("style", "background-color:red; border:1px solid black");
+        el.setAttribute('id', 'new');
+        el.setAttribute('class', 'circle')
+    }
+</script>
+<style>
+    .circle{
+        border-radius: 50%;
+    }
+</style>
+
+<div id="shape2" class="square"></div>
+<button onclick="changeAttr()">Change attributes...</button>
+
+<!-- Creating New elements -->
+<script>
+    function addRandomNumber(){
+        let elem = document.createElement('p');
+        elem.innerText = Math.floor(Math.random() * 100);
+        document.body.appendChild(elem);
+    }
+</script>
+<button onclick="addRandomNumber()">Add a number</button>
 
     <script src='script.js'></script>
 </body>
