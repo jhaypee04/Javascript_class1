@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse Events</title>
+</head>
+<body>
+    <h1>Mouse Event Handlers</h1>
+    <ol>
+        <li>ondblclick</li>
+        <li>onmouseup</li>
+        <li>onmousedown</li>
+        <li>onmouseenter</li>
+        <li>onmouseleave</li>
+        <li>onmousemove</li>
+        <li>onmouseout</li>
+        <li>onmouseover</li>
+    </ol>
+    <style>
+        .general{
+            width: 100px;
+            height: 100px;
+            margin-bottom: 10px;
+            background-color: pink;
+        }
+    </style>
+    <script>
+        function changeColor(){
+            document.querySelector('#mouseEvents').style.backgroundColor = 'salmon';
+        }
+    </script>
+    <!-- HTML Method -->
+    <div  id="mouseEvents" class="general" onmouseover="changeColor()" >onmouseover Event</div> 
+
+    <!-- addEventListener Method -->
+    <div id="mEvents" class="general">Different Events</div>
+    <script>
+        var div = document.querySelector('#mEvents');
+        div.addEventListener('mousedown', function(){
+            div.style.backgroundColor = 'red';
+        });
+        div.addEventListener('mouseup', function(){
+            div.style.backgroundColor = 'yellow';
+        });
+        div.addEventListener('dblclick', function(){
+            div.style.backgroundColor = 'black';
+            div.style.color = 'white';
+        });
+        div.addEventListener('mouseout', function(){
+            div.style.backgroundColor = 'blue';
+        });
+    </script>
+</body>
+</html>

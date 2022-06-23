@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice</title>
+</head>
+<body>
+    <div>red</div>
+    <div>blue</div>
+    <div>green</div>
+    <div>purple</div>
+    <div>salmon</div>
+    <div>olive</div>
+    <div>yellow</div>
+    <div>orange</div>
+    <div>black</div>
+    <div>gold</div>
+
+    <script>
+        var divs = document.querySelectorAll('div'); //Array of divs
+
+        for (let i = 0; i < divs.length; i++ ){
+            // console.log(divs[i]);
+            var div = divs[i];
+            div.addEventListener('click', function(event){ 
+                // console.log(event);
+                event.target.style.backgroundColor = event.target.textContent;
+             });
+        }
+    </script>
+</body>
+</html>

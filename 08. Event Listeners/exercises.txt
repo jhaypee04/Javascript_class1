@@ -1,0 +1,38 @@
+// Exerecise 1
+//  Personalize your web pages. Allow users to change the theme of the page display
+// between regular mode and dark mode.
+// 1. Within a simple HTML document, set up a Boolean value variable to use that will toggle the color modes.
+// 2. Use window.onclick to set up a function that outputs a message in the console when clicked. You can use the value of the Boolean variable.
+// 3. Within the function, add a condition that checks whether the darkMode variable is true or false.
+// 4. If false, then update the page style to a background color of black and a font
+// color of white.
+// 5. Add an else response that changes the color of the background to white and
+// the color of the text to black. Also, update the value of the darkMode variable
+// accordingly.
+
+Exercise 2: Dynamically change the background of each div's color
+1. Create several divs with color names in textContent.
+2.Add JavaScript to add click event listeners to each element, and as each element is clicked, update the
+background color of the body to match the color name in the div.
+
+Exercise 3: Mouse Events
+Our aim is to change the background color of the element on the page as the various
+mouse events occur. On mousedown over the element, the element will turn green.
+When the mouse is over the element, it will turn red. As the mouse moves out of the
+element boundaries, the color will turn yellow. When the mouse is clicked, the color
+will go green, and when the mouse is released, it will change to blue. The actions also
+be logged in the console.
+1. Create a blank element on the page and assign a class to it.
+2. Select the element using its class name.
+3. Assign a variable to the element object from the page.
+4. Update the content of the element to say hello world.
+5. Using the style properties of the element, update the height and width, then
+add a default background color to it.
+6. Create a function to handle two arguments, the first being a color value as a
+string and the second being the event object of the trigger.
+7. In the function, output the color value to the console, and for the event,
+output the event type to the console.
+8. Add event listeners to the element: mousedown, mouseover, mouseout, and
+mouseup. For each of these events, send two arguments to the function that
+you created: a color value and the event object.
+9. Run the code and try it in your browser.
