@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>'this' keyword</title>
+</head>
+<body>
+    <h1>THe 'this' keyword and the DOM</h1>
+    <h2>The 'this' keyword is used to <b>Traverse the DOM!</b></h2>
+    <p>This property can be very useful, for example, when
+        you need to get the value of an input box.</p>
+    <p onclick="show(this)">CLick here! </p>
+
+    <script>
+        function show(element) {
+            console.log(element.parentElement);
+        }
+    </script>
+
+
+<!-- Exercsise 1: this keyword -->
+
+<button onclick="message(this)">Click me</button>
+<button onclick="message(this)">Button2</button>
+<script>
+    function message(events) {
+        console.dir(events.textContent);
+    }
+</script>
+</body>
+</html>

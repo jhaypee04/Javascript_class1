@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>keyboard Events</title>
+</head>
+<body>
+    <h2>Keys event handler</h2>
+    <input type="text" onkeyup="numberCheck()">
+
+    <script>
+        function numberCheck(){
+            console.log(event.key);
+        }
+    </script>
+
+    <!-- Exercise 4 -->
+    <h3>Exercise 4</h3>
+    <div class="output"></div>
+    <input type="text" class="eles" >
+    <input type="text" class="eles" >
+
+    <script>
+        var output = document.querySelector('.output');
+        
+        var eles= document.querySelectorAll('.eles');
+        eles.forEach(function(ele) {
+           
+            ele.addEventListener('keydown', function(){
+               keyEvents();
+            } );
+            ele.addEventListener('keyup', function(){
+            //    keyEvents();
+            console.log(event.key);
+            } );
+            ele.addEventListener('paste', function(){
+                console.log("pasted!");
+            } );
+        });
+
+        function keyEvents () {
+             // is Not a Number
+             console.log( isNaN(event.key) );
+
+            if ( isNaN(event.key) ){
+                console.log(' Not a Number!')
+            } else{
+                console.log("A Number is pressed!");
+                output.textContent = event.key;
+            }
+        }
+
+
+    </script>
+</body>
+</html>

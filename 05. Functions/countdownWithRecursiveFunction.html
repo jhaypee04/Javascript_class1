@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 1:</title>
+</head>
+<body>
+    <h2>Count Down using Recursive Function</h2>
+    <script>
+        var start = 10;
+        function countdown( a ) {
+            console.log( a );
+            if ( a < 1 ){
+                return countdown(a);
+            } else if ( a > 1 ){
+                countdown( --a );
+            }
+        }
+        countdown(start);
+
+        // Part 2
+        console.log('Part 2');
+        function countdown1( a ) {
+            console.log( a );
+            if ( a > 0 ){
+                --a;
+                return countdown1(a);
+            }
+        }
+        countdown1(start);
+    </script>
+</body>
+</html>
