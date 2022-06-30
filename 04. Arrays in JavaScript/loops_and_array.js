@@ -5,27 +5,30 @@ for ( let i = 0; i < names.length; i++) {
     console.log( names[i]);
 }
 
-// Manipulating arrays
-const aList = [ 'Lawrence', 'Svekis', true, 35, null, undefined, [ 'one', 'two' ] ];
-// manipulate the  array above using the following methods:
-// pop(), push(), shift(), and unshift(), and transform it into the following:
-// ["FIRST", "Svekis", "MIDDLE", "hello World", "LAST"]
+// for of loop
+console.log('\nfor of loop:')
+var array_of_cars = [ 'Benz', 'Ford', 'Chevrolet', 'Volvo', 'Rolls Royce' ];
 
-// You can take the following steps, or adopt your own approach:
-// • Remove the first item and the last item.
-// • Add FIRST to the start of the array.
-// • Assign hello World to the fourth item value.
-// • Assign MIDDLE to the third index value.
-// • Add LAST to the last position in the array.
-// • Output it to the console. (POST YOUR ANSWER TO THE GOOGLE CLASSROOM)
+for ( let car of array_of_cars ) {
+    console.log(car)
+}
 
-// Solution
-// Manipulating an array
-
-// theList.pop();
-// theList.shift();
-// theList.unshift("FIRST");
-// theList[3] = "hello World";
-// theList[2] = "MIDDLE";
-// theList.push("LAST");
-// console.log(theList);
+// Exercise 1: for of loop
+// This exercise will construct an array as it loops through the incrementing values of x. Once the array is done, this exercise also will demonstrate several ways to output array contents.
+// 1. Create an empty array
+let arr = [];
+// 2. Run a loop 10 times, adding a new incrementing value to the array
+for ( let i = 0; i <= 10; i++) {
+    arr.push(i)
+}
+// 3. Log the array into the console
+console.log(arr);
+// 4. Use the for loop to iterate through the array (adjust the number of iterations to however many values are in your array) and output into the console.
+for (let i = 0; i< arr.length; i++){
+    console.log(arr[i]);
+}
+// 5. Use the for of loop to output the value into the console from the array
+console.log( '\nstep 5') //new line 
+for ( let value of arr) {
+    console.log(value)
+}
