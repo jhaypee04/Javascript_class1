@@ -37,4 +37,4 @@ var newValue = num.reduce( addAll , initialValue)
 function addAll( previousResult , nextValue ) {
     return previousResult + nextValue
 }
-console.log(newValue)
+console.log(newValu=e)
